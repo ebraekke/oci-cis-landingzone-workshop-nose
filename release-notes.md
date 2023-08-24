@@ -1,3 +1,44 @@
+#   August 8, 2023 Release Notes - 2.6.2
+1. [Fixes to the CIS Compliance Script](#2-6-2-script-updates)
+1. [Updates to the CIS Compliance Script](#2-6-2-script-updates)
+1. [Updates to the Readme](#2-6-2-readme-updates)
+
+## <a name="2-6-2-script-updates">Updates to the CIS Compliance Script</a>
+Updates:
+- Added Service Connector Hub ID and Name to OBP Best practices for VCN Flow Logs and Object Storage Buckets
+- Alert users when the cis_reports.py is not run in home region which can impact budgets collection
+
+## <a name="2-6-2-script-fixes">Fixes to the CIS Compliance Script</a>
+Fixes: 
+- Updated CIS 2.8 check updated to exclude ADB-S that are in a VCN but not attached to Network Security Group.  Closes issue [#105](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart/issues/105)
+- Cleaned up 1900+ Flake8 
+
+## <a name="2-6-2-readme-updates">Updates to the Readme</a>
+Updates:
+- Removed team section
+- Added the CIS Terraform Modules Section
+
+#   July 26, 2023 Release Notes - 2.6.1
+1. [Updates to Terraform Template](#2-6-1-tf-updates)
+1. [Documentation Updates](#2-6-1-doc-updates)
+1. [Fixes to the CIS Compliance Script](#2-6-1-script-fixes)
+
+## <a name="2-6-1-tf-updates">Updates to Terraform Template</a>
+Fixes:
+- Fixed a defect where missing exainfra admin group name in grants was causing policies creation to fail.
+
+Updates:
+- Set Terraform version upper bound to *< 1.3.0* in [provider.tf](./config/provider.tf).
+
+## <a name="2-6-1-doc-updates">Documentation Updates</a>
+Updates:
+- Added link to CIS Landing Zone Quick Start Live Lab in [README.md](./README.md).
+
+## <a name="2-6-1-script-fixes">Fixes to the CIS Compliance Script</a>
+Fixes:
+- CIS check 2.8 now skips autonomous database in the UNAVAILABLE state
+
+
 #   July 14, 2023 Release Notes - 2.6.0
 1. [Updates to Terraform Template](#2-6-0-tf-updates)
 
